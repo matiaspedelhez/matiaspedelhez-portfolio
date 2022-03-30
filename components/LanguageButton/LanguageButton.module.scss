@@ -1,0 +1,51 @@
+#LanguageButton {
+    padding-block: 0.25rem;
+    padding-inline: .5rem;
+    background-color: #2B2E42;
+    margin-block: 1rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    border: 1px solid #1b1d2d;
+    position:relative;
+    cursor:pointer;
+    img{
+        :-moz-drag-over: none;
+        -webkit-user-drag: none;
+        user-select: none;
+    }
+}
+
+.sub_menu{
+    position: absolute;
+    display: none;
+    background-color: #2B2E42;
+    height: auto;
+    width: 8rem;
+    color:white;
+    bottom: -10px;
+    transform: translateX(-33.33%) translateY(100%);
+    border-radius: 8px;
+    border: 1px solid #1b1d2d;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    :hover{
+        background-color: #3C4058;
+    }
+    padding-block:0.5rem;
+    
+    
+}
+
+.lang_item{
+    display: flex;
+    gap: 0.5rem;
+    // justify-content: center;
+    padding-left:1rem;
+    
+    p{
+        margin:0.4rem;
+    }
+}
