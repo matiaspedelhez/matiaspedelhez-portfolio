@@ -7,17 +7,22 @@
    flex-direction: row;
 }
 .links{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  max-width: 20rem;
-  width: 100%;
-  align-items: center;
+  display: none;
 }
 
 .logo_lang {
   display: flex;
 }
 @media only screen and (min-width: 960px) {
-
+  .hamburguer_button{
+    display:none;
+  }
+  .links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 20rem;
+    width: 100%;
+    align-items: center;
+  }
 }

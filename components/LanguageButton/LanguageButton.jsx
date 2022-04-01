@@ -1,14 +1,12 @@
 import styles from "./LanguageButton.module.scss";
 import Image from "next/image";
 import isRendered from "/public/isRendered";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import locales from "./locales";
 
 import flag_us from "/public/lang_us.svg";
 import flag_es from "/public/lang_es.svg";
 import arrow_down from "/public/arrow_down.svg";
-
-// !! add state (*mark)
 
 const LanguageButton = () => {
   const languageMenu = undefined;
