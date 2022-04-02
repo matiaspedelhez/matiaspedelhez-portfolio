@@ -2,12 +2,18 @@
 
 html,
 body {
+  
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: #1F2235;
+    background-color: #000000;
     color:white;
+}
+
+body{
+  display: flex;
+  justify-content: center;
 }
 
 a {

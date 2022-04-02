@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-//returns true if the client-side page was successfuly rendered
-
+//returns true if the client-side is rendered
 function isRendered() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {

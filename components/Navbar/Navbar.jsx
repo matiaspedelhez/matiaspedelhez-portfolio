@@ -12,13 +12,13 @@ import isRendered from "/public/isRendered";
 
 const Navbar = () => {
   const locale = useRouter().locale;
+  const pathname = useRouter().pathname;
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [showMenuButton, setShowMenuButton] = useState(false);
 
   useEffect(() => {
     if (isRendered) {
-      if (window.innerWidth < 960) setShowMenuButton(true);
-
       function isButtonRendered() {
         if (window.innerWidth < 960) {
           setMenuOpen(false);
@@ -28,6 +28,7 @@ const Navbar = () => {
           setShowMenuButton(false);
         }
       }
+      isButtonRendered();
       window.addEventListener("resize", isButtonRendered);
     }
     return () => window.removeEventListener("resize", isButtonRendered);
@@ -44,6 +45,10 @@ const Navbar = () => {
     }
   }, [menuOpen]);
 
+  const selectedLinkStyle = {
+    color: "#1179F7",
+  };
+
   return (
     <nav className={styles.nav}>
       <div className={styles.navMobile}>
@@ -57,13 +62,28 @@ const Navbar = () => {
       </div>
       <div className={styles.links}>
         <Link href={"/"}>
-          <a className={styles.a_link}>{locales[locale].nav[0]}</a>
+          <a
+            style={pathname === "/" ? selectedLinkStyle : {}}
+            className={styles.a_link}
+          >
+            {locales[locale].nav[0]}
+          </a>
         </Link>
         <Link href={"/projects"}>
-          <a className={styles.a_link}>{locales[locale].nav[1]}</a>
+          <a
+            style={pathname === "/projects" ? selectedLinkStyle : {}}
+            className={styles.a_link}
+          >
+            {locales[locale].nav[1]}
+          </a>
         </Link>
         <Link href={"/contact"}>
-          <a className={styles.a_link}>{locales[locale].nav[2]}</a>
+          <a
+            style={pathname === "/contact" ? selectedLinkStyle : {}}
+            className={styles.a_link}
+          >
+            {locales[locale].nav[2]}
+          </a>
         </Link>
       </div>
     </nav>
