@@ -17,32 +17,53 @@ const Navbar = () => {
 
   useEffect(() => {
     if (isRendered) {
+      if (window.innerWidth < 960) setShowMenuButton(true);
+
       function isButtonRendered() {
-        if (window.innerWidth < 960) setShowMenuButton(true);
-        else setShowMenuButton(false);
+        if (window.innerWidth < 960) {
+          setMenuOpen(false);
+          setShowMenuButton(true);
+        } else {
+          setMenuOpen(true);
+          setShowMenuButton(false);
+        }
       }
       window.addEventListener("resize", isButtonRendered);
     }
-
     return () => window.removeEventListener("resize", isButtonRendered);
   }, []);
 
+  useEffect(() => {
+    if (isRendered) {
+      const menu_dropdown = document.querySelector(`.${styles.links}`);
+      if (menuOpen) {
+        menu_dropdown.style.margin = "0";
+      } else {
+        menu_dropdown.style.margin = "-12rem 0 0 0";
+      }
+    }
+  }, [menuOpen]);
+
   return (
     <nav className={styles.nav}>
-      <div className={styles.logo_lang}>
-        <Image src={logoImage} layout="fixed" />
-        <LanguageButton />
+      <div className={styles.navMobile}>
+        <div className={styles.logo_lang}>
+          <Image src={logoImage} layout="fixed" />
+          <LanguageButton />
+        </div>
+        {showMenuButton && (
+          <Hamburger toggled={menuOpen} toggle={setMenuOpen} />
+        )}
       </div>
-      {showMenuButton && <Hamburger toggled={menuOpen} toggle={setMenuOpen} />}
       <div className={styles.links}>
         <Link href={"/"}>
-          <a>{locales[locale].nav[0]}</a>
+          <a className={styles.a_link}>{locales[locale].nav[0]}</a>
         </Link>
         <Link href={"/projects"}>
-          <a>{locales[locale].nav[1]}</a>
+          <a className={styles.a_link}>{locales[locale].nav[1]}</a>
         </Link>
         <Link href={"/contact"}>
-          <a>{locales[locale].nav[2]}</a>
+          <a className={styles.a_link}>{locales[locale].nav[2]}</a>
         </Link>
       </div>
     </nav>

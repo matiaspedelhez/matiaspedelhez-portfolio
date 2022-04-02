@@ -2,27 +2,48 @@
   padding-inline: 1rem;
     background-color: #1F2235;
     width: 100%;
-    display: flex;
-   justify-content: space-between;
-   flex-direction: row;
+}
+.navMobile{
+  position:relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1F2235;
 }
 .links{
-  display: none;
+  display:flex;
+  flex-direction: column;
+  height: 12rem;
+  align-items: center;
+  justify-content: center;
+  a{
+    padding: 1rem;
+  }
+  margin-top: -12rem;
 }
-
 .logo_lang {
   display: flex;
+  width: max-content;
 }
+
 @media only screen and (min-width: 960px) {
-  .hamburguer_button{
-    display:none;
+  .navMobile{
+    display: block;
+    width: max-content;
+  }
+  .nav{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
   }
   .links{
+    height:auto;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     max-width: 20rem;
     width: 100%;
     align-items: center;
+  
   }
 }
