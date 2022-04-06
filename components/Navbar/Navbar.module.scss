@@ -1,9 +1,9 @@
 .nav {
-  padding-inline: 1rem;
     background-color: #000000;
     width: 100vw;
 }
 .navMobile{
+  padding: 1rem;
   position:relative;
   z-index: 5;
   display: flex;
@@ -11,9 +11,11 @@
   background-color: #000000;
 }
 .links{
+  background-color: black;
   display:flex;
   flex-direction: column;
   height: 12rem;
+  margin: -12rem 0 0 0;
   align-items: center;
   justify-content: center;
   a{
@@ -26,7 +28,17 @@
 }
 .logo_lang {
   display: flex;
-  width: max-content;
+  width:  auto;
+
+ 
+  
+}
+.logo_image{
+  -webkit-user-drag: none;
+  user-select: none;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 960px) {
@@ -50,6 +62,6 @@
     max-width: 20rem;
     width: 100%;
     align-items: center;
-    
+    margin-top:0;
   }
 }

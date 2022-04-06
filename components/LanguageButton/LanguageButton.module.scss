@@ -1,8 +1,7 @@
 #LanguageButton {
-    padding-block: 0.25rem;
-    padding-inline: .5rem;
+    padding: 0.25rem 0.5rem;
     background-color: #ffffff;
-    margin-block: 1rem;
+    margin: 1rem 0;
     border-radius: 4px;
     display: flex;
     flex-direction: row;
@@ -33,9 +32,7 @@
     :hover{
         background-color: #B3D3FB;
     }
-    padding-block:0.5rem;
-    
-    
+    padding: 0.5rem 0;
 }
 
 .lang_item{

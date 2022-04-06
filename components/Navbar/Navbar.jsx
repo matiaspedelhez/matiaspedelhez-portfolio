@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
+import { motion } from "framer-motion";
 
 import logoImage from "/public/navbar-logo.png";
 import locales from "./locales";
@@ -34,17 +35,6 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", isButtonRendered);
   }, []);
 
-  useEffect(() => {
-    if (isRendered) {
-      const menu_dropdown = document.querySelector(`.${styles.links}`);
-      if (menuOpen) {
-        menu_dropdown.style.margin = "0";
-      } else {
-        menu_dropdown.style.margin = "-12rem 0 0 0";
-      }
-    }
-  }, [menuOpen]);
-
   const selectedLinkStyle = {
     color: "#1179F7",
   };
@@ -52,15 +42,25 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.navMobile}>
-        <div className={styles.logo_lang}>
-          <Image src={logoImage} layout="fixed" />
+        <motion.div className={styles.logo_lang}>
+          <Link href={"/"}>
+            <Image
+              className={styles.logo_image}
+              src={logoImage}
+              layout="fixed"
+            />
+          </Link>
           <LanguageButton />
-        </div>
+        </motion.div>
+
         {showMenuButton && (
           <Hamburger toggled={menuOpen} toggle={setMenuOpen} />
         )}
       </div>
-      <div className={styles.links}>
+      <motion.div
+        animate={showMenuButton ? (menuOpen ? { y: "12rem" } : { y: 0 }) : {}}
+        className={styles.links}
+      >
         <Link href={"/"}>
           <a
             style={pathname === "/" ? selectedLinkStyle : {}}
@@ -85,7 +85,7 @@ const Navbar = () => {
             {locales[locale].nav[2]}
           </a>
         </Link>
-      </div>
+      </motion.div>
     </nav>
   );
 };
