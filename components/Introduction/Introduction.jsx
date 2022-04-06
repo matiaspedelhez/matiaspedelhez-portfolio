@@ -3,7 +3,7 @@ import styles from "./Introduction.module.scss";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
-import ar_flag from "/public/ar_flag.svg";
+import ar_flag from "/public/assets/ar_flag.svg";
 
 function Introduction() {
   const locale = useRouter().locale;

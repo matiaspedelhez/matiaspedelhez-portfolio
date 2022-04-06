@@ -4,9 +4,9 @@ import isRendered from "/public/isRendered";
 import { useRouter } from "next/router";
 import locales from "./locales";
 
-import flag_us from "/public/lang_us.svg";
-import flag_es from "/public/lang_es.svg";
-import arrow_down from "/public/arrow_down.svg";
+import flag_us from "/public/assets/lang_us.svg";
+import flag_es from "/public/assets/lang_es.svg";
+import arrow_down from "/public/assets/arrow_down.svg";
 
 const LanguageButton = () => {
   const languageMenu = undefined;

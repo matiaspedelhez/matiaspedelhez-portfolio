@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
 import { motion } from "framer-motion";
 
-import logoImage from "/public/navbar-logo.png";
+import logoImage from "/public/assets/navbar-logo.png";
 import locales from "./locales";
 import LanguageButton from "../LanguageButton/LanguageButton";
 import isRendered from "/public/isRendered";
