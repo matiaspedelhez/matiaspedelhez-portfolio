@@ -19,7 +19,7 @@ export default {
     ],
     subtitle: [
       "Soy un Desarrollador Front-end de Argentina ",
-      " y me encanta elaborar productos digitales.",
+      " y disfruto mucho el proceso de crear productos digitales.",
     ],
     more: "Más información >",
   },

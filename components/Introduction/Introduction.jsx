@@ -4,11 +4,17 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import ar_flag from "/public/assets/ar_flag.svg";
+import { motion } from "framer-motion";
 
 function Introduction() {
   const locale = useRouter().locale;
   return (
-    <div className={styles.Introduction}>
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className={styles.Introduction}
+    >
       <p className={styles.name}>{locales[locale].name}</p>
       <h1 className={styles.title}>
         {locales[locale].title.map((str, ind) => {
@@ -31,7 +37,7 @@ function Introduction() {
       <Link href="/contact">
         <a className={styles.more}>{locales[locale].more}</a>
       </Link>
-    </div>
+    </motion.div>
   );
 }
 

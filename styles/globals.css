@@ -9,11 +9,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: #000000;
     color:white;
+    
 }
 
 body{
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 a {

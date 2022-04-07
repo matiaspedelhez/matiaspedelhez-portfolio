@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.navMobile}>
-        <motion.div className={styles.logo_lang}>
+        <div className={styles.logo_lang}>
           <Link href={"/"}>
             <Image
               className={styles.logo_image}
@@ -51,7 +51,7 @@ const Navbar = () => {
             />
           </Link>
           <LanguageButton />
-        </motion.div>
+        </div>
 
         {showMenuButton && (
           <Hamburger toggled={menuOpen} toggle={setMenuOpen} />
