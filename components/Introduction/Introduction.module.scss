@@ -1,7 +1,6 @@
 .blue_accent{
     color:#1179F7;
 }
-
 .Introduction{
     padding: 1rem;
     margin-top: 3rem;
@@ -24,17 +23,8 @@
     .more{
         font-size: 1.2rem;
         color:#1179F7;
-    }
-    .more:hover{
-    text-decoration: underline;
-    
-}
-}
-
-
-
-
-
-@media only screen and (min-width: 960px) {
-    
+        &:hover{
+            text-decoration: underline;
+        }
+    } 
 }

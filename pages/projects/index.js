@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 
-export default function Proyects() {
+export default function Projects() {
   return (
     <div>
       <Navbar />
