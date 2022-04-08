@@ -1,22 +1,20 @@
 import Navbar from "../../components/Navbar/Navbar";
 import projects from "/public/myProjects";
 import { useRouter } from "next/router";
+import SingleProjectPage from "../../components/SingleProjectPage/SingleProjectPage";
 
 export default function ProjectById() {
   const query = useRouter().query;
   const locale = useRouter().locale;
-  const [queriedElement] = projects.filter((e) => e.id === query.projectId);
+  const [queryData] = projects.filter((e) => e.id === query.projectId);
 
-  return queriedElement ? (
+  return queryData ? (
     <div>
-      <Navbar />
-      <h1>{queriedElement.name[locale]}</h1>
-      <h1>{queriedElement.shortDesc[locale]}</h1>
+      <SingleProjectPage queryData={queryData} locale={locale} />
     </div>
   ) : (
     <div>
-      <Navbar />
-      <h3>unfortunately, we didn't find the requested element.</h3>
+      <h3>Unfortunately, we couldn't find the requested element.</h3>
     </div>
   );
 }

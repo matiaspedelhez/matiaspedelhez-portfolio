@@ -47,7 +47,7 @@ const Navbar = () => {
             <Image
               className={styles.logo_image}
               src={logoImage}
-              layout="fixed"
+              layout="intrinsic"
             />
           </Link>
           <LanguageButton />
@@ -58,7 +58,7 @@ const Navbar = () => {
         )}
       </div>
       <motion.div
-        animate={showMenuButton ? (menuOpen ? { y: "12rem" } : { y: 0 }) : {}}
+        animate={showMenuButton ? (menuOpen ? { y: "11rem" } : { y: 0 }) : {}}
         className={styles.links}
       >
         <Link href={"/"}>

@@ -12,6 +12,7 @@ export default [
       es: "falta traducir",
     },
     deploy: "https://tenzies-game-delta.vercel.app/",
+    tools: ["react", "javascript", "sass", "figma"],
     repository: "https://github.com/matiaspedelhez/tenzies-game",
   },
   {
