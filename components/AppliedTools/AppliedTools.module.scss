@@ -1,27 +1,31 @@
-.AppliedTools{
+.AppliedTools {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 0 2rem 0;
-    & > *{
+
+    &>* {
         margin: 0.75rem 0.75rem 0.75rem 0;
     }
 }
-.item{
+
+.item {
     position: relative;
     height: 3rem;
     width: 3rem;
-    &:hover > .item_name{
+
+    &:hover>.item_name {
         opacity: 1;
     }
 }
-.item_name{
+
+.item_name {
     position: absolute;
     top: -75%;
     text-align: center;
     left: -50%;
     width: 200%;
-    text-transform:capitalize;
+    text-transform: capitalize;
     font-weight: 600;
     opacity: 0;
     user-select: none;

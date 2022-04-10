@@ -10,7 +10,7 @@ import { useState } from "react";
 
 const RecentProjects = () => {
   const [hoveringProject, setHoveringProject] = useState("");
-  const locale = useRouter().locale;
+  const { locale } = useRouter();
 
   const projectsOnView = projects
     .filter((p) => projects.indexOf(p) < 2) //first 2 items

@@ -1,0 +1,65 @@
+.DetailedProject {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 48px 0 0 0;
+}
+
+.imageContainer {
+    position: relative;
+    height: 300px;
+    width: 100%;
+
+    & img {
+        border-radius: 4px;
+    }
+}
+
+.button {
+    padding: 1rem 2rem;
+    font-weight: 500;
+    margin: 0 1rem 0 0;
+    transition: 0.15s;
+
+    &.deploy {
+        background-color: #1179F7;
+
+        &:hover {
+            background-color: #0f63c9;
+        }
+    }
+
+    &.respository {
+        background-color: #163964;
+
+        &:hover {
+            background-color: #214e88;
+        }
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .DetailedProject {
+        flex-direction: row;
+        justify-content: space-between;
+
+        & h1 {
+            margin: 0;
+        }
+
+        & h3 {
+            width: 36rem;
+        }
+    }
+
+    .imageContainer {
+        height: 350px;
+    }
+
+    .textContainer {
+        margin: 0 0 0 2rem;
+    }
+}

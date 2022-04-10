@@ -7,7 +7,7 @@ import ar_flag from "/public/assets/ar_flag.svg";
 import { motion } from "framer-motion";
 
 function Introduction() {
-  const locale = useRouter().locale;
+  const { locale } = useRouter();
   return (
     <motion.div
       initial={{ opacity: 0, x: 200 }}

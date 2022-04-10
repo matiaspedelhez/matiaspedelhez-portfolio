@@ -7,43 +7,46 @@
     flex-direction: row;
     gap: 0.5rem;
     border: 1px solid #1b1d2d;
-    position:relative;
-    cursor:pointer;
-    img{
-        :-moz-drag-over: none;
+    position: relative;
+    cursor: pointer;
+
+    img {
+        : -moz-drag-over: none;
         -webkit-user-drag: none;
         user-select: none;
     }
 }
 
-.sub_menu{
+.sub_menu {
     position: absolute;
     display: none;
     background-color: #ffffff;
     height: auto;
     width: 8rem;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     bottom: -10px;
     transform: translateX(-33.33%) translateY(100%);
     border-radius: 8px;
     border: 1px solid #1b1d2d;
     flex-direction: column;
     cursor: pointer;
-    :hover{
+
+    :hover {
         background-color: #B3D3FB;
     }
+
     padding: 0.5rem 0;
 }
 
-.lang_item{
+.lang_item {
     display: flex;
     gap: 0.5rem;
-    :-moz-drag-over: none;
+    : -moz-drag-over: none;
     -webkit-user-drag: none;
     user-select: none;
     padding-left: 1rem;
-    
-    p{
-        margin:0.4rem;
+
+    p {
+        margin: 0.4rem;
     }
 }

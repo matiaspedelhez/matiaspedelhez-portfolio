@@ -1,5 +1,5 @@
 import styles from "./AppliedTools.module.scss";
-import toolImages from "./tools";
+import toolImages from "/public/tools";
 import Image from "next/image";
 
 const AppliedTools = ({ tools }) => {
@@ -8,7 +8,7 @@ const AppliedTools = ({ tools }) => {
     <div className={styles.AppliedTools}>
       {appliedTools.map((e) => {
         return (
-          <div className={styles.item} key={e}>
+          <div className={styles.item} key={e.id}>
             <Image src={e.image} objectFit="contain" layout="fill" />
             <p className={styles.item_name}>{e.id}</p>
           </div>

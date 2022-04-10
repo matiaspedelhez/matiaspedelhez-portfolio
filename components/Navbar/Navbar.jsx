@@ -12,8 +12,7 @@ import LanguageButton from "../LanguageButton/LanguageButton";
 import isRendered from "/public/isRendered";
 
 const Navbar = () => {
-  const locale = useRouter().locale;
-  const pathname = useRouter().pathname;
+  const { locale, pathname } = useRouter();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [showMenuButton, setShowMenuButton] = useState(false);

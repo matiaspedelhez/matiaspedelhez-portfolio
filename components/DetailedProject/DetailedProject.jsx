@@ -1,11 +1,12 @@
 import Image from "next/image";
-import styles from "./SingleProjectPage.module.scss";
+import styles from "./DetailedProject.module.scss";
 import AppliedTools from "../AppliedTools/AppliedTools";
 import locales from "./locales";
 
-const SingleProjectPage = ({ queryData, locale }) => {
+const DetailedProject = ({ queryData, locale }) => {
+  //sugerencia: añadir barra de projectos relacionados, debajo. (para rellenar un poco el espacio vacío)
   return (
-    <div className={styles.SingleProjectPage}>
+    <div className={styles.DetailedProject}>
       <div className={styles.imageContainer}>
         <Image src={queryData.imageUrl} objectFit="cover" layout="fill" />
       </div>
@@ -32,4 +33,4 @@ const SingleProjectPage = ({ queryData, locale }) => {
   );
 };
 
-export default SingleProjectPage;
+export default DetailedProject;
