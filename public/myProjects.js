@@ -27,7 +27,7 @@ export default [
       en: "This was the first project I made in React. It is a simple game where you have to match all dies so they have the same value. By clicking them, you lock their value.",
       es: "falta traducir",
     },
-    tools: ["react", "javascript", "sass", "next", "python", "node", "figma"],
+    tools: ["javascript", "sass", "next", "python", "node", "figma"],
     deploy: "https://tenzies-game-delta.vercel.app/",
     repository: "https://github.com/matiaspedelhez/tenzies-game",
   },
