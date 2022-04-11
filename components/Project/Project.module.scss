@@ -1,5 +1,6 @@
 .project {
     position: relative;
+    margin: 0 0 1.5rem 0;
     width: 49%;
     height: 260px;
     display: flex;
@@ -44,4 +45,11 @@
     font-weight: 500;
     max-width: 15rem;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
 }

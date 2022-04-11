@@ -23,7 +23,9 @@ const RecentProjects = () => {
       <h1 className={styles.title}>{locales[locale].title}</h1>
       <div className={styles.projects}>{projectsOnView}</div>
       <Link href="/projects">
-        <a className={styles.more}>{locales[locale].more}</a>
+        <a href="/projects" className={styles.more}>
+          {locales[locale].more}
+        </a>
       </Link>
     </motion.div>
   );
