@@ -1,6 +1,6 @@
 import styles from "./ContactForm.module.scss";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const validate = require("validate.js");
 import constraints from "./validation";
 import Image from "next/image";
@@ -9,6 +9,13 @@ export default function ContactForm() {
   const { locale } = useRouter();
   const [formContent, setFormContent] = useState({ fields: {} });
   const [formErrors, setFormErrors] = useState({ fields: {} });
+  let isSafari = undefined;
+
+  useEffect(() => {
+    if (window.safari !== undefined) {
+      isSafari = true;
+    }
+  }, []);
 
   const handleFormContent = (id, event) => {
     const value = event.target.value.length ? event.target.value : undefined;
@@ -42,6 +49,7 @@ export default function ContactForm() {
         <div className={styles.ContactContainer}>
           <div style={errorStyling} className={styles.test}>
             <Image
+              style={isSafari ? errorStyling : ""}
               height="24px"
               className={styles.icon}
               src={require(`/public/assets/form_assets/${params.id}.svg`)}
