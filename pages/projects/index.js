@@ -4,23 +4,21 @@ import { useRouter } from "next/router";
 import styles from "/styles/projects.module.scss";
 import Project from "../../components/Project/Project";
 import myProjects from "/public/myProjects";
-import { number } from "prop-types";
+import locales from "/public/project_locales";
 
 export default function Projects() {
-  // !! feature: add dynamic "tool filters" rendering (i.e buttons for react, node, python, etc)
   const { locale } = useRouter();
   const [searchBar, setSearchBar] = useState("");
   const [selectedTools, setSelectedTools] = useState([]);
   const [filtered, setFiltered] = useState(myProjects);
-  const three = [];
 
   useEffect(() => {
-    three = commonTools();
     if (searchBar !== "" || selectedTools.length !== 0) {
       setFiltered(
         myProjects.filter(
           (p) =>
-            p.name[locale].toLowerCase().includes(searchBar.toLowerCase()) &&
+            (p.name[locale].toLowerCase().includes(searchBar.toLowerCase()) ||
+              p.tools.includes(searchBar.toLocaleLowerCase())) &&
             selectedTools.every((value) => {
               return p.tools.includes(value);
             })
@@ -30,10 +28,6 @@ export default function Projects() {
       setFiltered(myProjects);
     }
   }, [searchBar, selectedTools]);
-
-  useEffect(() => {
-    commonTools();
-  }, []);
 
   const handleSetSelectedTools = (tool) => {
     if (selectedTools.includes(tool)) {
@@ -59,6 +53,7 @@ export default function Projects() {
         className={styles.tool}
         onClick={() => handleSetSelectedTools(name)}
         style={toolStyling(name)}
+        key={name}
       >
         {name}
       </button>
@@ -66,7 +61,7 @@ export default function Projects() {
   };
 
   const commonTools = () => {
-    //returns the three most common languages across all projects
+    //returns the three less common languages across all projects
     const count = new Object();
     myProjects.forEach((project) => {
       project.tools.forEach((tool) => {
@@ -77,7 +72,7 @@ export default function Projects() {
       });
     });
     const countArr = Object.entries(count).sort(function (a, b) {
-      return a[1] - b[1];
+      return b[1] - a[1];
     });
 
     return countArr.filter((el) => countArr.indexOf(el) > 3);
@@ -85,17 +80,16 @@ export default function Projects() {
 
   return (
     <div className={styles.index}>
+      <h1>{locales[locale].title}</h1>
       <input
-        placeholder={"Search something..."}
+        placeholder={locales[locale].search}
         className={styles.inputField}
         value={searchBar}
         onChange={(e) => setSearchBar(e.target.value)}
       />
       <div className={styles.tools}>
-        <h4>Filters:</h4>
-        {three.forEach((e) => {
-          <>hola</>;
-        })}
+        <h4>{locales[locale].filters}</h4>
+        {commonTools().map((e) => createNewTool(e[0]))}
       </div>
       <div className={styles.projects}>
         {filtered.map((project) => (

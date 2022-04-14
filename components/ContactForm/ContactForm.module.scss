@@ -1,0 +1,125 @@
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #1d1e22;
+    height: 100%;
+}
+
+.error {
+    transition: 0.2s;
+    color: #b95959;
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+.ContactContainer {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+
+
+    .test {
+        transition: 0.2s;
+        position: absolute;
+        left: 0;
+        user-drag: none;
+        user-select: none;
+    }
+
+    & .field_name {
+        margin: 0.25rem 0;
+        font-weight: 500;
+    }
+
+    & input {
+
+        background-color: #1d1e22;
+        width: 100%;
+        height: 3rem;
+        border: 2px solid #353b42;
+        font-size: 1rem;
+        color: white;
+        font-weight: 400;
+        padding: 0 2rem 0 3.5rem;
+        border-radius: 0.4rem;
+        transition: 0.2s;
+
+
+        &:focus {
+            background-color: #25262a;
+            border: 2px solid #2e5d92;
+            outline: none;
+        }
+
+        &:focus+.required {
+            color: #b95959;
+        }
+
+        &::placeholder {
+            color: #919191;
+            user-drag: none;
+        }
+    }
+
+    .title {
+        text-align: center;
+
+
+        & h1 {
+            margin: 0;
+        }
+
+        & p {
+            font-size: 1.15rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+    }
+
+    .required {
+        transition: 0.2s;
+        transform: translateX(-1.5rem);
+        font-size: 1.25rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 0;
+        color: #919191;
+    }
+}
+
+.submit_button {
+    transition: 0.2s;
+    margin: 1.5rem 0 0 0;
+    height: 3rem;
+    border: 2px solid #353b42;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 500;
+    background-color: #1179F7;
+    cursor: pointer;
+    border-radius: 0.4rem;
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transition: 0s;
+        background-color: #1c5dac;
+
+
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 960px) {
+    .ContactForm {
+        max-width: 400px;
+    }
+
+
+}
