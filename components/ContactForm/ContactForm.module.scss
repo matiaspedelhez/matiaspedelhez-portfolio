@@ -115,10 +115,13 @@
     &:active {
         transition: 0s;
         background-color: #1c5dac;
-
-
         transform: translateY(0);
     }
+}
+
+.submited {
+    text-align: center;
+    color: #7ec47e;
 }
 
 @media (min-width: 960px) {

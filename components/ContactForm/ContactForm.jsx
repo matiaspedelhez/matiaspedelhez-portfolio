@@ -9,6 +9,7 @@ export default function ContactForm() {
   const { locale } = useRouter();
   const [formContent, setFormContent] = useState({ fields: {} });
   const [formErrors, setFormErrors] = useState({ fields: {} });
+  const [sentEmail, setSentEmail] = useState(false);
   let isSafari = undefined;
 
   useEffect(() => {
@@ -25,11 +26,20 @@ export default function ContactForm() {
   };
 
   const handleFormSubmit = () => {
+    //pass to useeffect somehow
+    const validation = validate(formContent["fields"], constraints);
     setFormErrors({
-      fields: validate(formContent["fields"], constraints),
+      fields: validation ? validation : {},
     });
-    if (formErrors.fields === {}) {
+
+    if (Object.keys(formErrors.fields).length === 0) {
       //send mail
+      setSentEmail(true);
+      fetch("api/mailHandler", {
+        method: "post",
+        body: JSON.stringify(formContent),
+      });
+      console.log("hello");
     }
   };
 
@@ -104,6 +114,7 @@ export default function ContactForm() {
       <button className={styles.submit_button} onClick={handleFormSubmit}>
         Submit
       </button>
+      {sentEmail && <p className={styles.submited}>Message submited</p>}
     </div>
   );
 }
