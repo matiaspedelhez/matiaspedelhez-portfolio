@@ -4,7 +4,7 @@ function HamburgerButton() {
   return (
     <button
       className={styles.menu}
-      onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+      onClick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
       aria-label="Main Menu"
     >
       <svg width={100} height={100} viewBox="0 0 100 100">

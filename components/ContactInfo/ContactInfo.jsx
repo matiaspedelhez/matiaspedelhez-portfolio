@@ -20,6 +20,7 @@ export default function ContactInfo() {
             <a
               href="https://github.com/matiaspedelhez"
               target="_blank"
+              rel="noreferrer"
               className={styles.social_item}
             >
               GitHub
@@ -27,6 +28,7 @@ export default function ContactInfo() {
             <a
               href="https://www.linkedin.com/in/matias-pedelhez-a84b061b4/"
               target="_blank"
+              rel="noreferrer"
               className={styles.social_item}
             >
               LinkedIn

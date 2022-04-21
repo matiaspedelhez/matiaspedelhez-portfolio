@@ -19,9 +19,9 @@ function Introduction() {
       <h1 className={styles.title}>
         {locales[locale].title.map((str, ind) => {
           return ind % 2 === 0 ? (
-            <span key={str[ind]}>{str}</span>
+            <span key={str}>{str}</span>
           ) : (
-            <span className={styles.blue_accent} key={str[ind]}>
+            <span key={str} className={styles.blue_accent}>
               {str}
             </span>
           );

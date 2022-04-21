@@ -7,7 +7,12 @@ const DetailedProject = ({ queryData, locale }) => {
   return (
     <div className={styles.DetailedProject}>
       <div className={styles.imageContainer}>
-        <Image src={queryData.imageUrl} objectFit="cover" layout="fill" />
+        <Image
+          src={queryData.imageUrl}
+          objectFit="cover"
+          layout="fill"
+          alt={queryData.id}
+        />
       </div>
       <div className={styles.textContainer}>
         <h1>{queryData.name[locale]}</h1>

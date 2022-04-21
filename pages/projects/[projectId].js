@@ -6,7 +6,6 @@ import Head from "next/head";
 export default function ProjectById() {
   const { query, locale } = useRouter();
   const [queryData] = projects.filter((e) => e.id === query.projectId);
-  console.log(queryData);
 
   return queryData ? (
     <div>
@@ -17,7 +16,7 @@ export default function ProjectById() {
     </div>
   ) : (
     <div>
-      <h3>Unfortunately, we couldn't find the requested element.</h3>
+      <h3>{`Unfortunately, we couldn\'t find the requested element.`}</h3>
     </div>
   );
 }
