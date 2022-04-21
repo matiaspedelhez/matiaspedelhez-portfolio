@@ -59,6 +59,7 @@ const Navbar = () => {
       <motion.div
         animate={showMenuButton ? (menuOpen ? { y: "11rem" } : { y: 0 }) : {}}
         className={styles.links}
+        onClick={() => setMenuOpen(false)}
       >
         <Link href={"/"}>
           <a

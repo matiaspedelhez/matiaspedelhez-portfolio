@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 import styles from "/styles/projects.module.scss";
 import Project from "../../components/Project/Project";
@@ -80,6 +81,9 @@ export default function Projects() {
 
   return (
     <div className={styles.index}>
+      <Head>
+        <title>{locales[locale].title}</title>
+      </Head>
       <h1>{locales[locale].title}</h1>
       <input
         placeholder={locales[locale].search}

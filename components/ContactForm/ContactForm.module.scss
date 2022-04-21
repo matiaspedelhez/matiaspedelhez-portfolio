@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: #1d1e22;
+    background-color: #111111;
     height: 100%;
     justify-content: center;
+    max-width: 500px;
+    width: 100%;
 
     & h1 {
         margin: 0 0 1rem 0;
@@ -27,7 +29,7 @@
     position: relative;
 
 
-    .test {
+    .field_icon {
         transition: 0.2s;
         position: absolute;
         left: 0;
@@ -42,10 +44,10 @@
 
     & input {
 
-        background-color: #1d1e22;
+        background-color: #222222;
         width: 100%;
         height: 3rem;
-        border: 2px solid #353b42;
+        border: 2px solid #2b2a2a;
         font-size: 1rem;
         color: white;
         font-weight: 400;
@@ -122,12 +124,13 @@
 .submited {
     text-align: center;
     color: #7ec47e;
+    transition: 0.2s;
+    user-select: none;
 }
 
 @media (min-width: 960px) {
     .ContactForm {
+
         max-width: 400px;
     }
-
-
 }

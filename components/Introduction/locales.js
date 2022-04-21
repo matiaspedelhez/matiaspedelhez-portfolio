@@ -6,7 +6,6 @@ export default {
       "I'm a Argentinian ",
       " Front-end Developer who loves building digital products.",
     ],
-    more: "Learn more >",
   },
   es: {
     name: "Hola, soy Matías.",
@@ -21,6 +20,5 @@ export default {
       "Soy un Desarrollador Front-end de Argentina ",
       " y me encanta crear productos digitales.",
     ],
-    more: "Más información >",
   },
 };

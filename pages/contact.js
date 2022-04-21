@@ -1,9 +1,15 @@
-import ContactForm from "../components/ContactForm/ContactForm";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import ContactPage from "../components/ContactPage/ContactPage";
 
 export default function Contact() {
+  const { locale } = useRouter();
   return (
     <>
-      <ContactForm />
+      <Head>
+        <title>{locale === "en" ? "Contact" : "Contacto"}</title>
+      </Head>
+      <ContactPage />
     </>
   );
 }

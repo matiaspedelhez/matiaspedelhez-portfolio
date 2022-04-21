@@ -4,7 +4,6 @@ import AppliedTools from "../AppliedTools/AppliedTools";
 import locales from "./locales";
 
 const DetailedProject = ({ queryData, locale }) => {
-  //sugerencia: añadir barra de projectos relacionados, debajo. (para rellenar un poco el espacio vacío)
   return (
     <div className={styles.DetailedProject}>
       <div className={styles.imageContainer}>
