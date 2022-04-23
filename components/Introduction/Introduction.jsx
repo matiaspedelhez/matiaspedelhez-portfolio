@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 
 function Introduction() {
   const { locale } = useRouter();
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 200 }}
@@ -18,10 +19,8 @@ function Introduction() {
       <p className={styles.name}>{locales[locale].name}</p>
       <h1 className={styles.title}>
         {locales[locale].title.map((str, ind) => {
-          return ind % 2 === 0 ? (
-            <span key={str}>{str}</span>
-          ) : (
-            <span key={str} className={styles.blue_accent}>
+          return (
+            <span key={str} className={ind % 2 === 0 ? "" : styles.blue_accent}>
               {str}
             </span>
           );
@@ -29,9 +28,9 @@ function Introduction() {
       </h1>
       <p className={styles.subtitle}>
         {[
-          locales[locale].subtitle[0],
-          <Image src={ar_flag} width="28px" height={"28px"} />,
-          locales[locale].subtitle[1],
+          <text key={"subtitle_0"}>{locales[locale].subtitle[0]}</text>,
+          <Image key={"image"} src={ar_flag} width="28px" height={"28px"} />,
+          <text key={"subtitle_1"}>{locales[locale].subtitle[1]}</text>,
         ]}
       </p>
       <Link href="/contact">

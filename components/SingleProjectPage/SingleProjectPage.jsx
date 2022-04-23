@@ -1,18 +1,13 @@
 import Image from "next/image";
-import styles from "./DetailedProject.module.scss";
+import styles from "./SingleProjectPage.module.scss";
 import AppliedTools from "../AppliedTools/AppliedTools";
 import locales from "./locales";
 
-const DetailedProject = ({ queryData, locale }) => {
+const SingleProjectPage = ({ queryData, locale }) => {
   return (
-    <div className={styles.DetailedProject}>
+    <div className={styles.SingleProjectPage}>
       <div className={styles.imageContainer}>
-        <Image
-          src={queryData.imageUrl}
-          objectFit="cover"
-          layout="fill"
-          alt={queryData.id}
-        />
+        <Image src={queryData.imageUrl} objectFit="cover" layout="fill" />
       </div>
       <div className={styles.textContainer}>
         <h1>{queryData.name[locale]}</h1>
@@ -20,7 +15,6 @@ const DetailedProject = ({ queryData, locale }) => {
         <AppliedTools tools={queryData.tools} />
         <a
           target="_blank"
-          rel="noreferrer"
           className={`${styles.deploy} ${styles.button}`}
           href={queryData.deploy}
         >
@@ -28,7 +22,6 @@ const DetailedProject = ({ queryData, locale }) => {
         </a>
         <a
           target="_blank"
-          rel="noreferrer"
           className={`${styles.respository} ${styles.button}`}
           href={queryData.repository}
         >
@@ -39,4 +32,4 @@ const DetailedProject = ({ queryData, locale }) => {
   );
 };
 
-export default DetailedProject;
+export default SingleProjectPage;
