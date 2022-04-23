@@ -15,6 +15,7 @@ const SingleProjectPage = ({ queryData, locale }) => {
         <AppliedTools tools={queryData.tools} />
         <a
           target="_blank"
+          rel="noreferrer"
           className={`${styles.deploy} ${styles.button}`}
           href={queryData.deploy}
         >
@@ -22,6 +23,7 @@ const SingleProjectPage = ({ queryData, locale }) => {
         </a>
         <a
           target="_blank"
+          rel="noreferrer"
           className={`${styles.respository} ${styles.button}`}
           href={queryData.repository}
         >
