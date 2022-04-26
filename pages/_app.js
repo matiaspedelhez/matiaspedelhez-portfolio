@@ -9,10 +9,10 @@ function MyApp({ Component, pageProps }) {
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        id="google-analytics"
+        id="google-analytics-import"
       />
 
-      <Script strategy="lazyOnload">
+      <Script strategy="lazyOnload" id="google-analytics-inline">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
