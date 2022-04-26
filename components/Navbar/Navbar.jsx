@@ -69,14 +69,6 @@ const Navbar = () => {
             {locales[locale].nav[0]}
           </a>
         </Link>
-        <Link href={"/projects"}>
-          <a
-            style={pathname === "/projects" ? selectedLinkStyle : {}}
-            className={styles.a_link}
-          >
-            {locales[locale].nav[1]}
-          </a>
-        </Link>
         <Link href={"/contact"}>
           <a
             style={pathname === "/contact" ? selectedLinkStyle : {}}
