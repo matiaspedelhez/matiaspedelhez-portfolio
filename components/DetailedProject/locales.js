@@ -1,10 +1,10 @@
 export default {
   en: {
     repository: "Repository",
-    deployment: "Deployment",
+    deployment: "Go to page",
   },
   es: {
     repository: "Repositorio",
-    deployment: "Despliegue",
+    deployment: "Visitar página",
   },
 };

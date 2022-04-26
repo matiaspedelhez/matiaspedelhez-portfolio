@@ -1,6 +1,7 @@
 export default [
   {
     id: "tenzies-game",
+    number: 0,
     name: { en: "Tenzies Game", es: "Juego Tenzies" },
     imageUrl: require("/public/assets/projects_images/tenzies_preview.png"),
     shortDesc: {
@@ -17,6 +18,7 @@ export default [
   },
   {
     id: "coffee-website",
+    number: 1,
     name: { en: "Coffee Website", es: "Página web de café" },
     imageUrl: require("/public/assets/projects_images/coffee_preview.png"),
     shortDesc: {
@@ -33,6 +35,7 @@ export default [
   },
   {
     id: "portfolio",
+    number: 2,
     name: { en: "My Portfolio", es: "Mi Portafolio" },
     imageUrl: require("/public/assets/projects_images/portfolio_preview.png"),
     shortDesc: {

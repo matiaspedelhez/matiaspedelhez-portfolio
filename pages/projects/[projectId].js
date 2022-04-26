@@ -1,6 +1,7 @@
 import projects from "/public/myProjects";
 import { useRouter } from "next/router";
 import DetailedProject from "../../components/DetailedProject/DetailedProject";
+import RecentProjects from "../../components/RecentProjects/RecentProjects";
 import Head from "next/head";
 
 export default function ProjectById() {
@@ -13,6 +14,7 @@ export default function ProjectById() {
         <title>{queryData.name[locale]}</title>
       </Head>
       <DetailedProject queryData={queryData} locale={locale} />
+      <RecentProjects currentProjectId={queryData.id} />
     </div>
   ) : (
     <div>
