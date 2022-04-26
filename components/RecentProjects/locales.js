@@ -1,10 +1,10 @@
 export default {
   en: {
-    title: "Most recent projects",
+    title: "More Projects",
     more: "Show all >",
   },
   es: {
-    title: "Proyectos más recientes",
+    title: "Otros Proyectos",
     more: "Ver más >",
   },
 };

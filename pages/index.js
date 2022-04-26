@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar/Navbar";
 import Introduction from "../components/Introduction/Introduction";
-import RecentProjects from "../components/RecentProjects/RecentProjects";
+import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
+
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -12,7 +12,7 @@ export default function Home() {
         <title>{locale === "en" ? "Home" : "Inicio"}</title>
       </Head>
       <Introduction />
-      <RecentProjects />
+      <ProjectsSection />
     </>
   );
 }

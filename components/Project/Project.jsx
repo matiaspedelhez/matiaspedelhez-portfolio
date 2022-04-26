@@ -12,6 +12,18 @@ const Project = ({ project }) => {
   return (
     <Link href={`/projects/${project.id}`}>
       <motion.div
+        transition={{ duration: 0.4, ease: "backOut", delay: 0.3 }}
+        initial={
+          project.number % 2
+            ? { rotate: "15deg", translateX: "16rem", opacity: 0 }
+            : { rotate: "-15deg", translateX: "-16rem", opacity: 0 }
+        }
+        whileInView={{
+          opacity: 1,
+          rotate: 0,
+          translateX: 0,
+        }}
+        viewport={{ once: true }}
         className={styles.project}
         onHoverStart={() => setHoveringProject(project.id)}
         onHoverEnd={() => setHoveringProject("")}
