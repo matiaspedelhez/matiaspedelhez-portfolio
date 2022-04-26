@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        id="google-analytics"
       />
 
       <Script strategy="lazyOnload">
