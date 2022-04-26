@@ -23,6 +23,18 @@
 
     .subtitle {
         font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        & * {
+            margin: 0 0.4rem
+        }
+
+        & :first-of-type {
+            margin: 0 0.4rem 0 0;
+        }
+
+
     }
 
     .more {

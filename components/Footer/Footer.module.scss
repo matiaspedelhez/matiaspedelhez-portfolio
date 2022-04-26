@@ -1,0 +1,19 @@
+.Footer {
+    position: static;
+    bottom: 0;
+    padding: .1rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+
+    & .name {
+        cursor: pointer;
+        color: #1179f7;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
