@@ -3,8 +3,8 @@ export default {
     name: "Hi, I'm Matías.",
     title: ["I provide ", "amazing ", "experiences through ", "websites", "."],
     subtitle: [
-      "I'm a Argentinian ",
-      " Front-end Developer who loves building digital products.",
+      "I'm a Argentinian",
+      "Front-end Developer who loves building digital products.",
     ],
   },
   es: {
@@ -17,8 +17,8 @@ export default {
       ".",
     ],
     subtitle: [
-      "Soy un Desarrollador Front-end de Argentina ",
-      " y me encanta crear productos digitales.",
+      "Soy un Desarrollador Front-end de Argentina",
+      "y me encanta crear productos digitales.",
     ],
   },
 };

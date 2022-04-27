@@ -1,8 +1,10 @@
 .ContactPage {
+    margin: 3px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(14, 14, 14);
 }
 
 @media (min-width: 960px) {

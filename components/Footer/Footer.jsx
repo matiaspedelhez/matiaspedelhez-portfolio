@@ -9,8 +9,8 @@ export default function Footer() {
 
   return (
     <div className={styles.Footer}>
-      <Image src={robot_emoji} height="28px" width="28px" alt="emoji" />
-      <span>{locales[locale].credits}</span>
+      <Image src={robot_emoji} height="25px" width="25px" alt="emoji" />
+      <span> {locales[locale].credits}</span>
       <a
         className={styles.name}
         href="https://www.linkedin.com/in/matias-pedelhez-a84b061b4/"

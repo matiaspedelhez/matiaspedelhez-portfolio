@@ -28,9 +28,9 @@ function Introduction() {
       </h1>
       <p className={styles.subtitle}>
         {[
-          <text key={"subtitle_0"}>{locales[locale].subtitle[0]} </text>,
+          <span key={"subtitle_0"}>{locales[locale].subtitle[0]} </span>,
           <Image key={"ar_flag"} src={ar_flag} width="28px" height={"28px"} />,
-          <text key={"subtitle_1"}>{locales[locale].subtitle[1]}</text>,
+          <span key={"subtitle_1"}> {locales[locale].subtitle[1]}</span>,
         ]}
       </p>
       <Link href="/contact">
