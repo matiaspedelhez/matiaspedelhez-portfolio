@@ -23,10 +23,17 @@
 }
 
 .button {
-    padding: 1rem 2rem;
+    padding: 1rem;
     font-weight: 500;
-    margin: 0 1rem 0 0;
+    margin: 0.5rem 0 0 0;
     transition: 0.15s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & span {
+        margin: 0 0 0 0.5rem;
+    }
 
     &.deploy {
         background-color: #1179F7;

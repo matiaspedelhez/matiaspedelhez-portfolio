@@ -3,6 +3,9 @@ import styles from "./DetailedProject.module.scss";
 import AppliedTools from "../AppliedTools/AppliedTools";
 import locales from "./locales";
 
+import arrow_right from "/public/assets/arrow-right.svg";
+import new_tab from "/public/assets/new-tab.svg";
+
 const DetailedProject = ({ queryData, locale }) => {
   return (
     <div className={styles.DetailedProject}>
@@ -24,7 +27,8 @@ const DetailedProject = ({ queryData, locale }) => {
           className={`${styles.deploy} ${styles.button}`}
           href={queryData.deploy}
         >
-          {locales[locale].deployment}
+          <span>{locales[locale].deployment}</span>
+          <Image src={new_tab} alt="new-tab" height="24px" />
         </a>
         <a
           target="_blank"
@@ -32,7 +36,8 @@ const DetailedProject = ({ queryData, locale }) => {
           className={`${styles.respository} ${styles.button}`}
           href={queryData.repository}
         >
-          {locales[locale].repository}
+          <span>{locales[locale].repository}</span>{" "}
+          <Image src={arrow_right} alt="arrow_right" height="32px" />
         </a>
       </div>
     </div>

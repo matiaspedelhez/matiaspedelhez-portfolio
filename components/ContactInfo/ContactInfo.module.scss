@@ -5,10 +5,11 @@
 }
 
 .text_container {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 0 1rem 0;
+
     padding: 1rem;
     font-size: 1.1rem;
     max-width: 500px;
@@ -27,14 +28,6 @@
 
     &:hover {
         text-decoration: underline;
-    }
-
-
-}
-
-@media (min-width: 960px) {
-    .ContactInfo {
-        width: 60%;
     }
 
 }

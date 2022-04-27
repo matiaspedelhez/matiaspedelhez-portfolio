@@ -1,3 +1,4 @@
+import ContactSocials from "../ContactSocials/ContactSocials";
 import styles from "./ContactInfo.module.scss";
 import locales from "./locales";
 import { useRouter } from "next/router";
@@ -13,28 +14,9 @@ export default function ContactInfo() {
         </p>
 
         <h3>{locales[locale].more}</h3>
-        <div>
-          <p>{locales[locale].location}</p>
-          <p>
-            {locales[locale].socials_title}{" "}
-            <a
-              href="https://github.com/matiaspedelhez"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.social_item}
-            >
-              GitHub
-            </a>{" "}
-            <a
-              href="https://www.linkedin.com/in/matias-pedelhez-a84b061b4/"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.social_item}
-            >
-              LinkedIn
-            </a>
-          </p>
-        </div>
+
+        <p>{locales[locale].location}</p>
+        <ContactSocials />
       </div>
     </div>
   );
