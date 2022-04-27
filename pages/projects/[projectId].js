@@ -11,7 +11,7 @@ export default function ProjectById() {
   return queryData ? (
     <div>
       <Head>
-        <title>{queryData.name[locale]}</title>
+        <title>{`Matias Pedelhez: ${queryData.name[locale]}`}</title>
       </Head>
       <DetailedProject queryData={queryData} locale={locale} />
       <RecentProjects currentProjectId={queryData.id} />

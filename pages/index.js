@@ -9,7 +9,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{locale === "en" ? "Home" : "Inicio"}</title>
+        <title>
+          {locale === "en"
+            ? "Matias Pedelhez: Home"
+            : "Matias Pedelhez: Inicio"}
+        </title>
       </Head>
       <Introduction />
       <ProjectsSection />

@@ -7,7 +7,11 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>{locale === "en" ? "Contact" : "Contacto"}</title>
+        <title>
+          {locale === "en"
+            ? "Matias Pedelhez: Contact"
+            : "Matias Pedelhez: Contacto"}
+        </title>
       </Head>
       <ContactPage />
     </>
