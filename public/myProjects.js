@@ -43,8 +43,8 @@ export default [
       es: "La página que estás visitando actualmente.",
     },
     longDesc: {
-      en: "With the idea of learning Next.JS, I started this project. It took me longer than I expected, but in the end, I think it was worth the time.",
-      es: "Con la idea de aprender Next.JS, empecé este proyecto. Me tomó un poco más de lo que imaginé, pero al final, creo que valió la pena.",
+      en: "Made primarely for learning Next.js, but it turned as a real project. By using Next's i18n (Internationalization), it can be displayed on english and spanish.",
+      es: "Creado principalmente para aprender Next.js, pero se convirtio en un proyecto real. Utilizando i18n de Next (Internacionalización) permite la presentación de multiples idiomas.",
     },
     deploy: "",
     tools: ["react", "javascript", "figma", "sass", "next"],
