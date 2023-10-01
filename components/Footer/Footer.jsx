@@ -13,7 +13,7 @@ export default function Footer() {
       <span> {locales[locale].credits}</span>
       <a
         className={styles.name}
-        href="https://www.linkedin.com/in/matias-pedelhez-a84b061b4/"
+        href="https://www.linkedin.com/in/matias-pedelhez"
         target="_blank"
         rel="noreferrer"
       >

@@ -1,7 +1,41 @@
 export default [
   {
-    id: "tenzies-game",
+    id: "msfs_mouse_yoke",
     number: 0,
+    name: { en: "Mouse Yoke MOD", es: "Mouse Yoke MOD" },
+    imageUrl: require("/public/assets/projects_images/mouse_yoke.webp"),
+    shortDesc: {
+      en: "Fly with your mouse in Microsoft Flight Simulator",
+      es: "Vuela con tu mouse en Microsoft Flight Simulator",
+    },
+    longDesc: {
+      en: "Use your mouse to control an airplane's yoke without the need of expensive equipment. It has already helped over 2k users, including individuals with disabilities, in enjoying Flight Simulator 2022. It insures a configurable way to emulate controller outputs by listening to the mouse position.",
+      es: "Utiliza tu ratón para controlar los aviones sin necesidad de gastar mucho dinero. Con más de 2k usuarios incluyendo a personas con discapacidades. Asegura una forma configurable de emular un controlador, escuchando la posición del mouse continuamente.",
+    },
+    deploy: "https://flightsim.to/file/43284/mouseyoke-for-msfs-fly-using-your-mouse-in-microsoft-flight-simulator-2020",
+    tools: ["python"],
+    repository: "https://github.com/matiaspedelhez/msfs_mouse_yoke",
+  },
+  {
+    id: "shopify-ecommerce",
+    number: 1,
+    name: { en: "Shopify Shop", es: "Tienda Shopify" },
+    imageUrl: require("/public/assets/projects_images/shopify.png"),
+    shortDesc: {
+      en: "Front-end of a Shopify shop, using Shopify's Storefront API",
+      es: "Front-end de una tienda de Shopify, utilizando la API 'Storefront', de Shopify",
+    },
+    longDesc: {
+      en: "This is a front-end UI that uses the normal Shopify CMS, but its completely custom made. It offers some features like Server-Side Rendering, having the normal Shopify CMS for editing your products, and local storage for things like the client's cart. Unfortunately, it was not possible to deploy the proyect publicly.",
+      es: "Esta es una interfaz de usuario personalizada que utiliza el CMS de Shopify, pero posee un diseño customizado. Ofrece algunas características tales como renderización del lado del servidor, la utilización del CMS estándar de Shopify para editar tus productos, y almacenamiento local para cosas como el carrito. Lamentablemente, no fue posible desplegar el proyecto de forma pública.",
+    },
+    // deploy: "https://tenzies-game-delta.vercel.app/",
+    tools: ["react", "next", "css", "figma", "typescript", "shopify", "tailwind"],
+    repository: "https://github.com/matiaspedelhez/shopify-ecommerce",
+  },
+  {
+    id: "tenzies-game",
+    number: 2,
     name: { en: "Tenzies Game", es: "Juego Tenzies" },
     imageUrl: require("/public/assets/projects_images/tenzies_preview.png"),
     shortDesc: {
@@ -18,7 +52,7 @@ export default [
   },
   {
     id: "coffee-website",
-    number: 1,
+    number: 3,
     name: { en: "Coffee Website", es: "Página web de café" },
     imageUrl: require("/public/assets/projects_images/coffee_preview.png"),
     shortDesc: {
@@ -35,7 +69,7 @@ export default [
   },
   {
     id: "portfolio",
-    number: 2,
+    number: 4,
     name: { en: "My Portfolio", es: "Mi Portafolio" },
     imageUrl: require("/public/assets/projects_images/portfolio_preview.png"),
     shortDesc: {

@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
 import { motion } from "framer-motion";
+import { AiOutlineGithub, IoNewspaperOutline } from 'react-icons/fa';
 
 import logoImage from "/public/assets/navbar-logo.png";
 import locales from "./locales";
@@ -61,22 +62,11 @@ const Navbar = () => {
         className={styles.links}
         onClick={() => setMenuOpen(false)}
       >
-        <Link href={"/"}>
-          <a
-            style={pathname === "/" ? selectedLinkStyle : {}}
-            className={styles.a_link}
-          >
-            {locales[locale].nav[0]}
-          </a>
-        </Link>
-        <Link href={"/contact"}>
-          <a
-            style={pathname === "/contact" ? selectedLinkStyle : {}}
-            className={styles.a_link}
-          >
-            {locales[locale].nav[2]}
-          </a>
-        </Link>
+
+        {/* <AiOutlineGithub />
+        <IoNewspaperOutline /> */}
+        {/* <IoNewspaperOutline /> */}
+       
       </motion.div>
     </nav>
   );
