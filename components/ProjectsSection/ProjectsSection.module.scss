@@ -1,5 +1,12 @@
 // home/projects
-.index {
+.parent_projectssection{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ProjectsSection {
+    max-width: 1200px;
     margin: 3rem 0 4rem 0;
     padding: 1rem;
     width: 100%;

@@ -76,32 +76,29 @@ export default function ProjectsPage() {
       return b[1] - a[1];
     });
 
-    return countArr.filter((el) => countArr.indexOf(el) > 3);
+    return countArr.filter((el) => countArr.indexOf(el) < 3);
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      className={styles.index}
-    >
-      <h1>{locales[locale].title}</h1>
-      <input
-        placeholder={locales[locale].search}
-        className={styles.inputField}
-        value={searchBar}
-        onChange={(e) => setSearchBar(e.target.value)}
-      />
-      <div className={styles.tools}>
-        <h4>{locales[locale].filters}</h4>
-        {commonTools().map((e) => createNewTool(e[0]))}
+    <div className={styles.parent_projectssection}>
+      <div className={styles.ProjectsSection}>
+        <h1>{locales[locale].title}</h1>
+        <input
+          placeholder={locales[locale].search}
+          className={styles.inputField}
+          value={searchBar}
+          onChange={(e) => setSearchBar(e.target.value)}
+        />
+        <div className={styles.tools}>
+          <h4>{locales[locale].filters}</h4>
+          {commonTools().map((e) => createNewTool(e[0]))}
+        </div>
+        <div className={styles.projects}>
+          {filtered.map((project) => (
+            <Project project={project} key={project.id} />
+          ))}
+        </div>
       </div>
-      <div className={styles.projects}>
-        {filtered.map((project) => (
-          <Project project={project} key={project.id} />
-        ))}
-      </div>
-    </motion.div>
+    </div>
   );
 }

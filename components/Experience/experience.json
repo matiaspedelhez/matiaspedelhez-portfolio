@@ -1,0 +1,51 @@
+{
+  "en": [
+    {
+      "company": "Accenture",
+      "img-src": "/assets/accenture-logo.png",
+      "time-start": "July 2022",
+      "time-end": "Present",
+      "job-title": "Associate Application Developer",
+      "job-responsabilities": [
+        "Python & Node.js scripting to help in the automation of repetitive tasks.",
+        "Built web application for accessing and modifying data transfer connectors. Highly improved its configuration time.",
+        "Built and deployed HTTP APIs with Node.js and GCP Cloud Functions, utilizing Azure Pipelines for CI/CD and Terraform for IaaC.",
+        "Monitoring of data transfer critical jobs on an Apache Kafka architecture through SSH."
+      ],
+      "tech-stack": [
+        "GCP (Functions, Bigquery, Storage)",
+        "React.j",
+        "Node.js",
+        "Javascript",
+        "Terraform",
+        "Linux",
+        "Git",
+        "Next.js",
+        "Python"
+      ]
+    },
+    {
+      "company": "Tawasol Solutions & Services",
+      "img-src": "/assets/default-company-logo.png",
+      "time-start": "Jan 2022",
+      "time-end": "July 2022",
+      "job-title": "Front-end Developer",
+      "job-responsabilities": [
+        "Designed 8 views in Figma, following UX/UI principles.",
+        "Created and integrated GraphQL database for storing website blog pages.",
+        "Developed dynamic web application using Next.js, SASS and Javascript by following the Figma design"
+      ],
+      "tech-stack": [
+        "HTML",
+        "CSS/SASS",
+        "Javascript",
+        "React.js",
+        "Next.js",
+        "Figma",
+        "GraphQL",
+        "Node.js",
+        "Git"
+      ]
+    }
+  ]
+}

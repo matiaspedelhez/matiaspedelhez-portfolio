@@ -3,9 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import Hamburger from "hamburger-react";
-import { motion } from "framer-motion";
-import { AiOutlineGithub, IoNewspaperOutline } from 'react-icons/fa';
+import {
+  AiOutlineGithub,
+  AiOutlinePaperClip,
+  AiFillLinkedin,
+} from "react-icons/ai";
 
 import logoImage from "/public/assets/navbar-logo.png";
 import locales from "./locales";
@@ -52,22 +54,28 @@ const Navbar = () => {
           </Link>
           <LanguageButton />
         </div>
+        <div className={styles.links_social}>
+          <a
+            href={"https://www.linkedin.com/in/matias-pedelhez/"}
+            target="_blank"
+          >
+            <AiFillLinkedin size={28} />
+          </a>
 
-        {showMenuButton && (
-          <Hamburger toggled={menuOpen} toggle={setMenuOpen} />
-        )}
+          <a href={"https://github.com/matiaspedelhez"} target="_blank">
+            <AiOutlineGithub size={28} />
+          </a>
+          <a
+            href="matias-pedelhez-resume.pdf"
+            alt="Download resume"
+            target="_blank"
+            locale={false}
+          >
+            <AiOutlinePaperClip size={28} />
+          </a>
+        </div>
       </div>
-      <motion.div
-        animate={showMenuButton ? (menuOpen ? { y: "11rem" } : { y: 0 }) : {}}
-        className={styles.links}
-        onClick={() => setMenuOpen(false)}
-      >
-
-        {/* <AiOutlineGithub />
-        <IoNewspaperOutline /> */}
-        {/* <IoNewspaperOutline /> */}
-       
-      </motion.div>
+      <div className={styles.links} onClick={() => setMenuOpen(false)}></div>
     </nav>
   );
 };

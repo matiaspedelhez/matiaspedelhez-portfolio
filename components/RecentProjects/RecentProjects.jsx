@@ -22,16 +22,18 @@ const RecentProjects = ({ currentProjectId }) => {
   };
 
   return (
-    <div className={styles.RecentProjects}>
-      <h1 className={styles.title}>{locales[locale].title}</h1>
-      <div className={styles.projects}>
-        {arrayOfProjects().map((project) => (
-          <Project project={project} key={project.id} />
-        ))}
+    <div className={styles.parent_recentprojects}>
+      <div className={styles.RecentProjects}>
+        <h1 className={styles.title}>{locales[locale].title}</h1>
+        <div className={styles.projects}>
+          {arrayOfProjects().map((project) => (
+            <Project project={project} key={project.id} />
+          ))}
+        </div>
+        <Link href="/">
+          <span className={styles.more}>{locales[locale].more}</span>
+        </Link>
       </div>
-      <Link href="/">
-        <span className={styles.more}>{locales[locale].more}</span>
-      </Link>
     </div>
   );
 };

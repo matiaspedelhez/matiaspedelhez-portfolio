@@ -9,8 +9,8 @@ export default [
       es: "Vuela con tu mouse en Microsoft Flight Simulator",
     },
     longDesc: {
-      en: "Use your mouse to control an airplane's yoke without the need of expensive equipment. It has already helped over 2k users, including individuals with disabilities, in enjoying Flight Simulator 2022. It insures a configurable way to emulate controller outputs by listening to the mouse position.",
-      es: "Utiliza tu ratón para controlar los aviones sin necesidad de gastar mucho dinero. Con más de 2k usuarios incluyendo a personas con discapacidades. Asegura una forma configurable de emular un controlador, escuchando la posición del mouse continuamente.",
+      en: "Use your mouse to control an airplane's yoke without the need of expensive equipment. It has already helped over 2,000 users, including individuals with disabilities, in enjoying Flight Simulator 2020. It insures a configurable way to emulate controller outputs by listening to the mouse position.",
+      es: "Esta herramienta permite usar el mouse como instrumento de vuelo en Microsoft Flight Simulator 2020. Posee más de 2.000 usuarios, incluyendo a personas con discapacidades. Brinda una forma configurable de emular un controlador, escuchando la posición del mouse continuamente.",
     },
     deploy: "https://flightsim.to/file/43284/mouseyoke-for-msfs-fly-using-your-mouse-in-microsoft-flight-simulator-2020",
     tools: ["python"],

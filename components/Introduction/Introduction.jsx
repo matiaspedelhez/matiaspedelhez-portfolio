@@ -10,33 +10,38 @@ function Introduction() {
   const { locale } = useRouter();
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      className={styles.Introduction}
-    >
-      <p className={styles.name}>{locales[locale].name}</p>
-      <h1 className={styles.title}>
-        {locales[locale].title.map((str, ind) => {
-          return (
-            <span key={str} className={ind % 2 === 0 ? "" : styles.blue_accent}>
-              {str}
-            </span>
-          );
-        })}
-      </h1>
-      <p className={styles.subtitle}>
-        {[
-          <span key={"subtitle_0"}>{locales[locale].subtitle[0]} </span>,
-          <Image key={"ar_flag"} src={ar_flag} width="28px" height={"28px"} />,
-          <span key={"subtitle_1"}> {locales[locale].subtitle[1]}</span>,
-        ]}
-      </p>
-      <Link href="/contact">
-        <a className={styles.more}>{locales[locale].more}</a>
-      </Link>
-    </motion.div>
+    <div className={styles.parent_introduction}>
+      <div className={styles.Introduction}>
+        <p className={styles.name}>{locales[locale].name}</p>
+        <h1 className={styles.title}>
+          {locales[locale].title.map((str, ind) => {
+            return (
+              <span
+                key={str}
+                className={ind % 2 === 0 ? "" : styles.blue_accent}
+              >
+                {str}
+              </span>
+            );
+          })}
+        </h1>
+        <p className={styles.subtitle}>
+          {[
+            <span key={"subtitle_0"}>{locales[locale].subtitle[0]} </span>,
+            <Image
+              key={"ar_flag"}
+              src={ar_flag}
+              width="28px"
+              height={"28px"}
+            />,
+            <span key={"subtitle_1"}> {locales[locale].subtitle[1]}</span>,
+          ]}
+        </p>
+        <Link href="/contact">
+          <a className={styles.more}>{locales[locale].more}</a>
+        </Link>
+      </div>
+    </div>
   );
 }
 

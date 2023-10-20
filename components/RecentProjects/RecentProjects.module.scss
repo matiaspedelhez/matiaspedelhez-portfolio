@@ -1,4 +1,12 @@
+.parent_recentprojects{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .RecentProjects {
+    max-width: 1200px;
+    width: 100%;
     padding: 1rem;
     margin: 3rem 0 5rem 0;
 }

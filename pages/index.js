@@ -1,3 +1,4 @@
+import Experience from "../components/Experience/Experience";
 import Introduction from "../components/Introduction/Introduction";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 
@@ -16,6 +17,7 @@ export default function Home() {
         </title>
       </Head>
       <Introduction />
+      {/* <Experience /> */}
       <ProjectsSection />
     </>
   );
