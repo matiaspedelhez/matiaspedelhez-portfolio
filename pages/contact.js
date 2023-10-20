@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import ContactPage from "../components/ContactPage/ContactPage";
 
 export default function Contact() {
   const { locale } = useRouter();
@@ -13,7 +12,7 @@ export default function Contact() {
             : "Matias Pedelhez: Contacto"}
         </title>
       </Head>
-      <ContactPage />
+      {/* <ContactPage /> */}
     </>
   );
 }

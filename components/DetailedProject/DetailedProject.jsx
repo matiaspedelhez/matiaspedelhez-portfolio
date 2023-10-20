@@ -22,24 +22,28 @@ const DetailedProject = ({ queryData, locale }) => {
           <h1>{queryData.name[locale]}</h1>
           <h3>{queryData.longDesc[locale]}</h3>
           <AppliedTools tools={queryData.tools} />
-          <a
-            target="_blank"
-            rel="noreferrer"
-            className={`${styles.deploy} ${styles.button}`}
-            href={queryData.deploy}
-          >
-            <span>{locales[locale].deployment}</span>
-            <Image src={new_tab} alt="new-tab" height="24px" />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            className={`${styles.respository} ${styles.button}`}
-            href={queryData.repository}
-          >
-            <span>{locales[locale].repository}</span>{" "}
-            <Image src={arrow_right} alt="arrow_right" height="32px" />
-          </a>
+          {queryData.deploy && (
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className={`${styles.deploy} ${styles.button}`}
+              href={queryData.deploy}
+            >
+              <span>{locales[locale].deployment}</span>
+              <Image src={new_tab} alt="new-tab" height="24px" />
+            </a>
+          )}
+          {queryData.repository && (
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className={`${styles.respository} ${styles.button}`}
+              href={queryData.repository}
+            >
+              <span>{locales[locale].repository}</span>{" "}
+              <Image src={arrow_right} alt="arrow_right" height="32px" />
+            </a>
+          )}
         </div>
       </div>
     </div>

@@ -58,17 +58,23 @@ const Navbar = () => {
           <a
             href={"https://www.linkedin.com/in/matias-pedelhez/"}
             target="_blank"
+            rel="noreferrer"
           >
             <AiFillLinkedin size={28} />
           </a>
 
-          <a href={"https://github.com/matiaspedelhez"} target="_blank">
+          <a
+            href={"https://github.com/matiaspedelhez"}
+            target="_blank"
+            rel="noreferrer"
+          >
             <AiOutlineGithub size={28} />
           </a>
           <a
-            href="matias-pedelhez-resume.pdf"
+            href="/matias-pedelhez-resume.pdf"
             alt="Download resume"
             target="_blank"
+            rel="noreferrer"
             locale={false}
           >
             <AiOutlinePaperClip size={28} />
